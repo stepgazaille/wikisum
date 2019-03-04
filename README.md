@@ -1,0 +1,2 @@
+# wikisum
+Wikisum training scripts
