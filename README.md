@@ -1,5 +1,5 @@
 # WikiSum
-Wikisum training scripts
+Docker image and extra documentation for WikiSum.
 
 # Requirements
 - NVIDIA GPU
