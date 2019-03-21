@@ -1,6 +1,15 @@
-# Use an official tensorflow runtime as a parent image
-FROM tensorflow/tensorflow:1.13.1-gpu-py3-jupyter
+# Use official tensorflow image
+FROM tensorflow/tensorflow:1.13.1-gpu-py3
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --trusted-host pypi.python.org tensor2tensor
+# Set the working directory to /wikisum
+WORKDIR /home/wikisum
+
+# Copy requirements file into the container WORKDIR
+COPY requirements.txt /home/wikisum
+
+# Install dependencies:
+RUN pip uninstall protobuf -y && pip install -r requirements.txt
+
+# Cleanup:
+RUN rm requirements.txt
 
