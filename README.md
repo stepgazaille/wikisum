@@ -80,4 +80,4 @@ Use the following command to launch Tensorboard from the container:
 ```
 tensorboard --logdir output
 ```
-Tensorboard can be accessed on the local host at `http://localhost:6006`.
+Tensorboard can be accessed on the local host at [http://localhost:6006](http://localhost:6006)
