@@ -1,0 +1,4 @@
+name: t2t
+dependencies:
+  - python=3.5
+

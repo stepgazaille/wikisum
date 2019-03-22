@@ -5,9 +5,10 @@ Docker image and extra documentation for WikiSum.
 - NVIDIA GPU
 - Latest [NVIDIA drivers](https://www.nvidia.com/Download/index.aspx?lang=en-us)
 - [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
+- Python 3.5
 
 # Installation
-You can either pull a [prebuilt image](https://hub.docker.com/r/stepgazaille/wikisum)  from DockerHub or build the image using the provided DockerFile.
+You can either pull a [prebuilt image](https://hub.docker.com/r/stepgazaille/wikisum) from DockerHub, build an image using the provided DockerFile, or do a bare metal installation.
 ## Pull image from DockerHub
 ```
 docker pull stepgazaille/wikisum:0.0.1
@@ -16,6 +17,10 @@ docker pull stepgazaille/wikisum:0.0.1
 ```
 cd wikisum
 docker build -t stepgazaille/wikisum:0.0.1 .
+```
+## Bare metal installation
+```
+pip install -r requirements.txt
 ```
 
 # Usage
