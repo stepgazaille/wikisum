@@ -20,10 +20,12 @@ docker build -t stepgazaille/wikisum:0.0.1 .
 ```
 ## Bare metal installation
 ```
+cd wikisum
 pip install -r requirements.txt
 ```
 
 # Usage
+## Docker
 Assuming this repository was cloned to `~/wikisum` on your local host, the following command will:
 - Launch a container based on the `stepgazaille/wikisum:0.0.1` docker image
 - Mount the local `~/wikisum` directory to the container's `/home/wikisum` directory
@@ -84,5 +86,9 @@ t2t-decoder \
 Use the following command to launch Tensorboard from the container:
 ```
 tensorboard --logdir output
+```
+If using Docker image, use following command instead:
+```
+docker run --runtime=nvidia --rm -p 6006:6006 stepgazaille/wikisum:0.0.1 tensorboard --logdir output
 ```
 Tensorboard can be accessed on the local host at [http://localhost:6006](http://localhost:6006)
